@@ -1,9 +1,14 @@
-import { useState } from 'react';
-import { useGetHero } from '../Hooks/useGetHero';
+import { useGetHome } from '../Hooks/useGetHome';
 
 const Home = () => {
-  const { sliderData } = useGetHero();
-  console.log(sliderData);
+  const {
+    sliderData,
+    trendData,
+    moviesData,
+    tvData,
+    categoryMovieData,
+    categoryTvData,
+  } = useGetHome();
 
   return <div>Home</div>;
 };
