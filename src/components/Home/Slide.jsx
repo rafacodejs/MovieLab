@@ -1,6 +1,5 @@
 import { Vote, GenreButton } from '../index';
 import styles from '../../styles/styles';
-import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { imdb } from '../../assets/index';
 import { useGetCategories } from '../../Hooks/useGetCategories';
@@ -34,7 +33,9 @@ const Slide = ({
               <Vote vote={vote} />
             </div>
 
-            <div className={`${styles.flexStart} flex-row mt-2 ss:mt-3 md:mt-4`}>
+            <div
+              className={`${styles.flexStart} flex-row mt-2 ss:mt-3 md:mt-4`}
+            >
               <img
                 src={imdb}
                 alt='imdb_icon'

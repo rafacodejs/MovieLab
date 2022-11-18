@@ -9,6 +9,7 @@ module.exports = {
         secondary: '#5822b4',
         dark: '#121212',
         dimDark: '#181818',
+        blackHover: "#282828",
         dimWhite: 'rgba(255, 255, 255, 0.7)',
         dimGray: 'rgba(255, 255, 255, 0.6)',
       },
@@ -29,6 +30,7 @@ module.exports = {
       '5xl': '28px 13px 74px -21px rgba(0, 0, 0, 0.75)',
     },
     lineClamp: {
+      1: '1',
       2: '2',
       4: '4',
       6: '6',

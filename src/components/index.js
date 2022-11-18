@@ -6,5 +6,19 @@ import { Slider } from './Home/Slider';
 import { Slide } from './Home/Slide';
 import { Vote } from './Vote';
 import { GenreButton } from './GenreButton';
-
-export { Header, TabBar, Menu, SearchBar, Slider, Slide, Vote, GenreButton };
+import { CarouselCard } from './Home/CarouselCard';
+import { Card } from './Home/Card';
+import { CardButton } from './Home/CardButton';
+export {
+  Header,
+  TabBar,
+  Menu,
+  SearchBar,
+  Slider,
+  Slide,
+  Vote,
+  GenreButton,
+  CarouselCard,
+  Card,
+  CardButton,
+};

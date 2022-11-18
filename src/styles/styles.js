@@ -3,6 +3,7 @@ const styles = {
 
   flexCenter: 'flex justify-center items-center',
   flexStart: 'flex justify-start items-center',
+  flexStartX: 'flex justify-start items-start',
 
   paddingX: 'sm:px-16 px-6',
   paddingY: 'sm:py-16 py-6',
