@@ -3,8 +3,9 @@ import {
   RiTvLine,
   RiFireLine,
   RiHome3Line,
+  RiSearchLine,
 } from 'react-icons/ri';
-import { AiOutlineUser } from 'react-icons/ai';
+
 export const navLinks = [
   {
     id: 1,
@@ -21,11 +22,11 @@ export const navLinks = [
     to: '/tv',
     text: 'Tv Series',
   },
-  /*{
-      id: 4,
-      to: '/favorites',
-      text: 'Favorites',
-    },*/
+  {
+    id: 4,
+    to: '/favorites',
+    text: 'Favorites',
+  },
 ];
 export const tabBar = [
   {
@@ -42,20 +43,20 @@ export const tabBar = [
   },
   {
     id: 3,
+    to: '/search',
+    text: 'Search',
+    icon: RiSearchLine,
+  },
+  {
+    id: 4,
     to: '/tv',
     text: 'Tv Series',
     icon: RiMovie2Line,
   },
-  /*  {
-      id: 4,
-      to: '/favorites',
-      text: 'Favorites',
-      icon: RiTvLine,
-    },
-    {
-      id: 5,
-      to: '/user',
-      text: 'User',
-      icon: AiOutlineUser,
-    },*/
+  {
+    id: 5,
+    to: '/favorites',
+    text: 'Favorites',
+    icon: RiTvLine,
+  },
 ];

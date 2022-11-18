@@ -7,3 +7,23 @@ body {
   background-color: #121212;
   color: #fff;
 }
+.text-gradient {
+  background: radial-gradient(
+    circle farthest-side at left center,
+    #991eeb 0%,
+    #820dcf 25%,
+    #8003d3 50%,
+    #9b1af1 75%,
+    #5822b4 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.animation-link {
+  transition: 0.4s;
+}
+.animation-link:hover {
+  transform: scale(1.1);
+}

@@ -20,7 +20,12 @@ const App = () => {
   return (
     <section>
       <HashRouter>
-        <Header />
+        <div className=' flex justify-center items-center p-4 sm:hidden'>
+          <h1 className='text-3xl font-primary font-bold'>MOVIELAB</h1>
+        </div>
+        <section className='hidden sm:block'>
+          <Header />
+        </section>
 
         <Routes>
           <Route path='/' element={<Home />} />
