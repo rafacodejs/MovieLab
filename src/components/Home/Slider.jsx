@@ -37,8 +37,9 @@ const Slider = ({ data }) => {
   }, [currentSlide]);
 
   return (
-    <div className='relative w-full h-[600px] overflow-hidden rounded-[10px] scroll-smooth shadow-5xl slide-container'>
-      <div className={`${styles.navigation} navigation z-20`}>
+    <div className='relative w-full h-[600px] overflow-hidden  scroll-smooth shadow-5xl slide-container'>
+     
+      <div className={`${styles.navigation} navigation z-30`}>
         <span className={`${styles.PrevNext} rounded-r-lg`}>
           <IoIosArrowBack
             className='relative right-[9px] bottom-[1px] ss:top-[0px] sm:top-[3px]  text-dimBlack'

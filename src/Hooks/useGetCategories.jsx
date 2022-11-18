@@ -4,7 +4,7 @@ import { API } from '../API';
 const useGetCategories = ({ id, media }) => {
   const [categoriesMovies, setCategoriesMovies] = useState([]);
   const [categoriesTv, setCategoriesTv] = useState([]);
-  const [categories, setCategories] = useState('');
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -23,7 +23,11 @@ const useGetCategories = ({ id, media }) => {
     fetchCategories();
   }, []);
 
-  return categories;
+  return {
+    categories,
+    categoriesMovies,
+    categoriesTv,
+  };
 };
 
 export { useGetCategories };

@@ -1,4 +1,4 @@
-import { Vote } from '../index';
+import { Vote, GenreButton } from '../index';
 import styles from '../../styles/styles';
 import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -15,8 +15,7 @@ const Slide = ({
   media,
   currentSlide,
 }) => {
-  const categories = useGetCategories({ id, media });
-  const test = categories;
+  const { categories } = useGetCategories({ id, media });
 
   return (
     <div
@@ -24,31 +23,34 @@ const Slide = ({
         index === currentSlide ? 'block' : 'hidden'
       }`}
     >
-      <div className='invisible sm:visible absolute w-full h-[350px] ss:h-[600px] bg-black opacity-40 ' />
+      <div className='absolute w-full h-[350px] ss:h-[600px] bg-black opacity-40 ' />
 
       {index === currentSlide && (
-        <div className={`${styles.flexCenter} z-30`}>
+        <div className={`${styles.flexCenter}`}>
           <div className={`${styles.sliderInfo}`}>
             <h1 className={`${styles.sliderHeading}`}>{title}</h1>
-            <Vote vote={vote} />
 
-            <div className={`${styles.flexStart} flex-row mt-5`}>
-              <img src={imdb} alt='imdb_icon' className='w-[50px]' />
-              <h4 className='font-primary font-medium text-white text-[24px] ml-3'>
+            <div>
+              <Vote vote={vote} />
+            </div>
+
+            <div className={`${styles.flexStart} flex-row mt-2 ss:mt-3 md:mt-4`}>
+              <img
+                src={imdb}
+                alt='imdb_icon'
+                className='w-[30px] ss:w-[50px]'
+              />
+              <h4 className='font-primary font-medium text-white text-[15px] ss:text-[22px] ml-3'>
                 {vote}
               </h4>
-              <h4 className='font-primary font-medium text-white text-[24px] ml-3'>
+              <h4 className='font-primary font-medium text-white text-[15px] ss:text-[22px] ml-3'>
                 {date}
               </h4>
             </div>
 
-            <div className='flex flex-row flex-wrap justify-start items-start mt-3 ss:mt-1'>
-              {test.map((item) => (
-                <button key={item.id} className={`${styles.bannerButton}`}>
-                  <Link to={`/categories/${item.name}/${item.id}/`}>
-                    {item.name}
-                  </Link>
-                </button>
+            <div className='hidden ss:flex w-full flex-row flex-wrap justify-start items-start mt-1 md:mt-3'>
+              {categories.map((item) => (
+                <GenreButton name={item.name} key={item.id} id={item.id} />
               ))}
             </div>
 
