@@ -6,5 +6,6 @@ import movie from './movie_icon.png';
 import fake from './fake-pic.jpg';
 import notPoster from './no-poster.png';
 import notBanner from './not-banner.jpg';
+import imdb from './imdb_icon.png';
 
-export { netflix, hbo, prime, disney, movie, fake, notPoster, notBanner };
+export { netflix, hbo, prime, disney, movie, fake, notPoster, notBanner, imdb };

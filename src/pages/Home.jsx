@@ -1,4 +1,6 @@
 import { useGetHome } from '../Hooks/useGetHome';
+import styles from '../styles/styles';
+import { Slider } from '../components';
 
 const Home = () => {
   const {
@@ -10,7 +12,11 @@ const Home = () => {
     categoryTvData,
   } = useGetHome();
 
-  return <div>Home</div>;
+  return (
+    <section className={`${styles.flexCenter}`}>
+      <Slider data={sliderData} />
+    </section>
+  );
 };
 
 export { Home };

@@ -11,7 +11,6 @@ const useGetHome = () => {
 
   useEffect(() => {
     const fetchHome = async () => {
-      
       const sliderRes = await API(`trending/all/day`);
       const trendingRes = await API(`trending/all/week`);
       const movieRes = await API(`trending/movie/week`);
