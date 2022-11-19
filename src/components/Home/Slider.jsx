@@ -59,7 +59,7 @@ const Slider = ({ data }) => {
             index={index}
             media={item.media_type}
             title={item.name || item.title}
-            vote={item.vote_average}
+            vote={item.vote_average.toFixed(1)}
             date={(item.release_date || item.first_air_date).split('-')[0]}
             overview={item.overview}
             poster={`https://image.tmdb.org/t/p/original${
