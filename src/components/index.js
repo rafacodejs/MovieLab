@@ -11,6 +11,11 @@ import { Card } from './Home/Card';
 import { CardButton } from './Home/CardButton';
 import { Carousel } from './Home/Carousel';
 import { PosterCarousel } from './Home/PosterCarousel';
+import { CategoryButton } from './Home/CategoryButton';
+import { Footer } from './Footer';
+import { Banner } from './Details/Banner';
+import { Cast } from './Details/Cast';
+import { Platform } from './Details/Platform';
 
 export {
   Header,
@@ -26,4 +31,9 @@ export {
   CardButton,
   Carousel,
   PosterCarousel,
+  CategoryButton,
+  Footer,
+  Banner,
+  Cast,
+  Platform,
 };

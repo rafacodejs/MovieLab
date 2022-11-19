@@ -10,7 +10,7 @@ import {
   Search,
   Favorites,
 } from './index';
-import { Header, TabBar } from '../components';
+import { Header, TabBar, Footer } from '../components';
 
 const App = () => {
   useEffect(() => {
@@ -41,6 +41,7 @@ const App = () => {
           <TabBar />
         </section>
       </HashRouter>
+      <Footer />
     </section>
   );
 };

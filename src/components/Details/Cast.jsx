@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-import { PosterCarousel } from '../index';
+import { Link } from 'react-router-dom';
+import { fake } from '../../assets';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const Carousel = ({ data, title, mediaDefault }) => {
+const Cast = ({ data, title }) => {
   const containerRef = React.useRef();
   const sliderTimerRef = React.useRef();
 
@@ -32,14 +34,14 @@ const Carousel = ({ data, title, mediaDefault }) => {
   };
 
   return (
-    <div className='relative ss:h-[450px] w-[100%] ss:w-[90%] scroll-smooth mb-14'>
+    <div className='relative ss:h-[450px] w-[100%] ss:w-[90%] top-0 xs:top-16 sm:mt-0 scroll-smooth xs:mb-6 sm:mb-0'>
       <div className='flex flex-row justify-between items-center'>
         <div className='w-[80%] flex flex-col justify-start items-start px-2'>
           <h1 className='text-[24px] sm:text-[34px] font-primary font-bold text-white ml-3 ss:ml-0'>
             {title}
           </h1>
         </div>
-        <div className='hidden md:flex flex-row justify-center items-center mr-5'>
+        <div className='hidden sm:flex flex-row justify-center items-center mr-5'>
           <span
             className='mr-3 text-white text-[8px]'
             onClick={() => slide('left')}
@@ -56,24 +58,39 @@ const Carousel = ({ data, title, mediaDefault }) => {
       </div>
 
       <div
-        className='w-full h-full grid grid-rows-20 grid-flow-col ss:gap-4 items-start  ss:mt-10 scroll-smooth whitespace-nowrap ss:snap-mandatory overflow-x-auto md:overflow-hidden overflow-y-hidden'
+        className='w-full h-full grid grid-rows-20 grid-flow-col ss:gap-4 items-start ss:mt-5 scroll-smooth whitespace-nowrap ss:snap-mandatory overflow-x-auto ss:overflow-hidden'
         ref={containerRef}
       >
         {data.map((item) => (
-          <PosterCarousel
+          <section
+            className='flex flex-col justify-center items-center w-[180px] h-[350px] animation-img -ml-0 -mr-4 sm:-mr-2 ss:ml-2 ss-mr-7 p-2 ss:p-0'
             key={item.id}
-            id={item.id}
-            mediaDefault={mediaDefault}
-            media={item.media_type}
-            poster={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
-            title={item.name || item.title}
-            vote={item.vote_average.toFixed(1)}
-            item={item}
-          />
+          >
+            <Link to={`/person/${item.id}`}>
+              <LazyLoadImage
+                src={
+                  item.profile_path !== null
+                    ? `https://image.tmdb.org/t/p/w500${item?.profile_path}`
+                    : fake
+                }
+                alt={item.original_name || item.name}
+                className='w-[150px] h-[220px] ss:w-[220px] ss:h-[260px] rounded-t-[14px] ss:mt-6 cursor-pointer'
+                loading='lazy'
+              />
+            </Link>
+
+            <div className='w-[150px] ss:w-full flex flex-row h-[60px] ss:h-[100px] relative bg-secondary rounded-b-[14px]'>
+              <div className='w-[90px] ss:w-[100px] mt-2 ml-2 mr-3'>
+                <h1 className='w-[20px] text-[16px] text-white font-primary font-normal'>
+                  {item.original_name}
+                </h1>
+              </div>
+            </div>
+          </section>
         ))}
       </div>
     </div>
   );
 };
 
-export { Carousel };
+export { Cast };

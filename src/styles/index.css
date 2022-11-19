@@ -79,6 +79,13 @@ body {
   grid-template-columns: 0.1fr 1.5fr 0.4fr;
   grid-template-rows: 1fr;
 }
+.banner-grid {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  grid-template-rows: 1fr;
+  place-content: center;
+  place-items: center;
+}
 .liked-container {
   position: relative;
   top: -75px;
@@ -118,5 +125,18 @@ body {
   100% {
     /* background-position: -2800px 0; */
     background-position: right;
+  }
+}
+
+@media screen and (min-width: 920px) and (max-width: 1024px) {
+  .banner-grid {
+    grid-template-columns: 0.4fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media screen and (min-width: 270px) and (max-width: 920px) {
+  .banner-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 1fr;
   }
 }

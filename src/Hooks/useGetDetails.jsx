@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { API } from '../API';
 
 const useGetDetails = ({ id, media }) => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   const [genres, setTest] = useState([]);
   const [cast, setCast] = useState([]);
   const [recommended, setSimilar] = useState([]);

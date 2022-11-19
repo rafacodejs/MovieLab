@@ -28,7 +28,13 @@ const styles = {
     'flex w-full md:w-[88%] h-auto text-justify text-dimBlack text-[10px] xs:text-[14px] sm:text-[18px] font-primary font-normal mt-3 line-clamp-4 md:line-clamp-none',
 
   bannerButton:
-    'flex justify-center items-center xs:w-[125px] sm:w-[180px] ss:h-[30px] sm:h-[40px] bg-transparent rounded-full text-white font-primary font-medium text-[12px] ss:text-[14px] sm:text-[20px] cursor-pointer shadow-5xl border-2 border-primary mt-3 mr-1 ss:mr-3 animation-img',
+    'flex justify-center items-center xs:w-[125px] sm:w-[200px] ss:h-[30px] sm:h-[40px] bg-transparent rounded-full text-white font-primary font-medium text-[12px] ss:text-[14px] sm:text-[20px] cursor-pointer shadow-5xl border-2 border-primary mt-3 mr-1 ss:mr-3 animation-img',
+
+  bannerHeading:
+    'font-primary font-bold text-[26px] sm:text-[32px] md:text-[36px] text-white mt-10 text-center sm:text-start',
+
+  bannerParagraph:
+    'ss:w-full font-primary font-normal text-[14px] ss:text-[16px] md:text-[18px] text-white text-justify  mt-2',
 };
 
 export default styles;
