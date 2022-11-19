@@ -9,6 +9,9 @@ import { GenreButton } from './GenreButton';
 import { CarouselCard } from './Home/CarouselCard';
 import { Card } from './Home/Card';
 import { CardButton } from './Home/CardButton';
+import { Carousel } from './Home/Carousel';
+import { PosterCarousel } from './Home/PosterCarousel';
+
 export {
   Header,
   TabBar,
@@ -21,4 +24,6 @@ export {
   CarouselCard,
   Card,
   CardButton,
+  Carousel,
+  PosterCarousel,
 };

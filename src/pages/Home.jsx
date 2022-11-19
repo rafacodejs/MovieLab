@@ -1,6 +1,6 @@
 import { useGetHome } from '../Hooks/useGetHome';
 import styles from '../styles/styles';
-import { Slider, CarouselCard } from '../components';
+import { Slider, CarouselCard, Carousel } from '../components';
 
 const Home = () => {
   const {
@@ -20,6 +20,8 @@ const Home = () => {
         subTitle='See our hot trends about all kind of content that you like'
         data={trendData}
       />
+      <Carousel data={moviesData} title='Movies' mediaDefault='movie' />
+      <Carousel data={tvData} title='Tv Series' mediaDefault='tv' />
     </section>
   );
 };

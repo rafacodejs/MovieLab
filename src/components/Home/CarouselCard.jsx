@@ -33,7 +33,7 @@ const CarouselCard = ({ data, mediaDefault, title, subTitle }) => {
   };
 
   return (
-    <section className='relative w-[100%] ss:w-[90%] scroll-smooth mt-4 xs:mt-12 sm:mt-24 mb-52'>
+    <section className='relative w-[100%] ss:w-[90%] scroll-smooth mt-4 xs:mt-12 sm:mt-24 mb-8 sm:mb-14'>
       <div className='flex flex-row justify-between items-center'>
         <div className='w-[80%] flex flex-col justify-start items-start mt-2 px-2'>
           <h1 className='text-[24px] sm:text-[34px] font-primary font-bold text-white ml-4 ss:ml-0'>
@@ -43,7 +43,7 @@ const CarouselCard = ({ data, mediaDefault, title, subTitle }) => {
             {subTitle}
           </h4>
         </div>
-        <div className='hidden sm:flex flex-row justify-center items-center mr-5'>
+        <div className='hidden md:flex flex-row justify-center items-center mr-5'>
           <span
             className='mr-3 text-white text-[8px]'
             onClick={() => slide('left')}
@@ -60,7 +60,7 @@ const CarouselCard = ({ data, mediaDefault, title, subTitle }) => {
       </div>
 
       <div
-        className='w-full h-full flex flex-row mt-6 scroll-smooth whitespace-nowrap ss:snap-mandatory overflow-x-auto ss:overflow-hidden'
+        className='w-full h-full flex flex-row mt-6 scroll-smooth whitespace-nowrap ss:snap-mandatory overflow-x-auto md:overflow-hidden'
         ref={containerRef}
       >
         {data.map((item) => (

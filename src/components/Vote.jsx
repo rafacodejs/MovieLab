@@ -56,7 +56,7 @@ const Vote = ({ vote }) => {
       </div>
     );
   }
-  if (vote === 10) {
+  if (vote >= 10) {
     return (
       <div className='flex flex-row text-yellow-400 text-[14px] ss:text-[16px] sm:text-[28px]'>
         <TiStarFullOutline />

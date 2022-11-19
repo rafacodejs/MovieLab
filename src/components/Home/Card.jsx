@@ -5,9 +5,9 @@ import styles from '../../styles/styles';
 const Card = ({ id, title, poster, date, vote, media, mediaDefault }) => {
   return (
     <div
-      className={`${styles.flexStartX} flex-col w-[380px] h-[300px] ss:w-[380px] ss:h-[220px] whitespace-normal bg-dimDark rounded-[12px] shadow-5xl mr-2 ml-3 hover:bg-blackHover `}
+      className={`${styles.flexStartX} flex-col w-[340px] h-[200px] ss:w-[380px] ss:h-[220px] whitespace-normal bg-dimDark rounded-[12px] shadow-5xl sm:mr-2 ml-3 hover:bg-blackHover `}
     >
-      <div className='w-[380px] h-[220px] p-2'>
+      <div className='w-[340px] h-[200px] sm:w-[380px] sm:h-[220px] p-2'>
         <LazyLoadImage
           src={poster}
           alt={title}
@@ -23,7 +23,9 @@ const Card = ({ id, title, poster, date, vote, media, mediaDefault }) => {
               {title}
             </h3>
             <div className='flex flex-row'>
-              <Vote vote={vote} />
+              <div className={`${styles.flexCenter}`}>
+                <Vote vote={vote} />
+              </div>
               <h5 className='text-[16px] font-primary font-normal mt-1 ml-2'>
                 {vote}
               </h5>
