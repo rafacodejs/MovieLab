@@ -10,6 +10,7 @@ const useGetCategories = ({ id, media }) => {
     const fetchCategories = async () => {
       const categoryResMovie = await API(`/discover/movie?with_genres=${id}`);
       const categoryResTv = await API(`/discover/tv?with_genres=${id}`);
+
       const categoryRes = await API(`${media}/${id}`);
       const categoryDataMovie = categoryResMovie.data.results;
       const categoryDataTv = categoryResTv.data.results;

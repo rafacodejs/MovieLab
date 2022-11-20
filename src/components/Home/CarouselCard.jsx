@@ -33,7 +33,7 @@ const CarouselCard = ({ data, mediaDefault, title, subTitle }) => {
   };
 
   return (
-    <section className='relative w-[100%] ss:w-[90%] scroll-smooth mt-4 xs:mt-12 sm:mt-24 mb-8 sm:mb-14'>
+    <section className='relative w-[100%] ss:w-[90%] scroll-smooth mt-4 ss:mt-0 sm:mt-4 mb-8 sm:mb-14'>
       <div className='flex flex-row justify-between items-center'>
         <div className='w-[80%] flex flex-col justify-start items-start mt-2 px-2'>
           <h1 className='text-[24px] sm:text-[34px] font-primary font-bold text-white ml-4 ss:ml-0'>
