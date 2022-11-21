@@ -20,7 +20,7 @@ const App = () => {
   return (
     <section>
       <HashRouter>
-        <div className=' flex justify-center items-center p-4 sm:hidden'>
+        <div className=' flex justify-center items-center p-4 sm:hidden '>
           <h1 className='text-3xl font-primary font-bold'>MOVIELAB</h1>
         </div>
         <section className='hidden sm:block'>

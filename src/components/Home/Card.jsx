@@ -7,7 +7,7 @@ const Card = ({ id, title, poster, date, vote, media, mediaDefault }) => {
     <div
       className={`${styles.flexStartX} flex-col w-[340px] h-[200px] ss:w-[380px] ss:h-[220px] whitespace-normal bg-dimDark rounded-[12px] shadow-5xl sm:mr-2 ml-3 hover:bg-blackHover `}
     >
-      <div className='w-[340px] h-[200px] sm:w-[380px] sm:h-[220px] p-2'>
+      <div className='max-w-[380px] max-h-[380px] w-[340px] h-[200px] sm:w-[380px] sm:h-[220px] p-2'>
         <LazyLoadImage
           src={poster}
           alt={title}

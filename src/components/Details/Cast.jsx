@@ -79,7 +79,7 @@ const Cast = ({ data, title }) => {
               />
             </Link>
 
-            <div className='w-[150px] ss:w-full flex flex-row h-[60px] ss:h-[100px] relative bg-secondary rounded-b-[14px]'>
+            <div className='w-[150px] ss:w-full flex flex-row h-[60px] ss:h-[100px] relative bg-blackHover rounded-b-[14px]'>
               <div className='w-[90px] ss:w-[100px] mt-2 ml-2 mr-3'>
                 <h1 className='w-[20px] text-[16px] text-white font-primary font-normal'>
                   {item.original_name}
