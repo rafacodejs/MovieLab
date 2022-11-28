@@ -10,7 +10,7 @@ import {
   Search,
   Favorites,
 } from './index';
-import { Header, TabBar, Footer } from '../components';
+import { Header, TabBar } from '../components';
 
 const App = () => {
   useEffect(() => {
@@ -20,13 +20,9 @@ const App = () => {
   return (
     <section>
       <HashRouter>
-        <div className=' flex justify-center items-center p-4 sm:hidden '>
-          <h1 className='text-3xl font-primary font-bold'>MOVIELAB</h1>
-        </div>
-        <section className='hidden sm:block'>
+        <div className='hidden sd:block'>
           <Header />
-        </section>
-
+        </div>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/search/:query' element={<Search />} />
@@ -37,11 +33,10 @@ const App = () => {
           <Route path='/person/:id' element={<Person />} />
           <Route path='/categories/:name/:id' element={<Categories />} />
         </Routes>
-        <section className='flex sm:hidden'>
+        <div className='block sd:hidden'>
           <TabBar />
-        </section>
+        </div>
       </HashRouter>
-      <Footer />
     </section>
   );
 };

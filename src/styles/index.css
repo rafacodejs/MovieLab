@@ -4,7 +4,7 @@
 
 body {
   overflow-x: hidden;
-  @apply bg-gradient-to-br from-dimDark to-[#19335a];
+  @apply bg-gradient-to-br from-[#282828] to-[#19335a];
   color: #fff;
 }
 

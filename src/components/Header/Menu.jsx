@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { navLinks } from '../../routes';
 import styles from '../../styles/styles';
+
 const Menu = () => {
   return (
     <nav className={`${styles.flexCenter}`}>
@@ -8,9 +9,9 @@ const Menu = () => {
         {navLinks.map((link, index) => (
           <li
             key={link.id}
-            className={`text-[20px] md:text-[22px] font-primary font-bold ${
+            className={`font-primary font-bold text-[24px] ${
               index === navLinks.length - 1 ? 'mr-0' : 'sm:mr-4 md:mr-6 '
-            } animation-link` }
+            } animation-link`}
           >
             <NavLink
               className={({ isActive }) =>
