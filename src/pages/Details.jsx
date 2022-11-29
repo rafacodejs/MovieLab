@@ -8,7 +8,6 @@ import { notBanner, notPoster } from '../assets';
 const Details = () => {
   const { id, media } = useParams();
   const { data, genres, cast, recommended } = useGetDetails({ id, media });
-  console.log(data);
 
   return (
     <section

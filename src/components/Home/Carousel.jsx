@@ -61,7 +61,7 @@ const Carousel = ({ data, title, mediaDefault }) => {
       >
         {data.map((item) => (
           <PosterCarousel
-            key={item.id}
+            key={item.title}
             id={item.id}
             mediaDefault={mediaDefault}
             media={item.media_type}

@@ -29,6 +29,7 @@ module.exports = {
     },
     boxShadow: {
       '5xl': '28px 13px 74px -21px rgba(0, 0, 0, 0.75)',
+      '6xl': '0  5px 10px rgba(154,160,185,0.05)',
     },
     lineClamp: {
       1: '1',

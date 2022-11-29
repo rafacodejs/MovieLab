@@ -18,7 +18,7 @@ const Slide = ({
 
   return (
     <div
-      className={`h-[200px] ss:h-auto slide fade ${
+      className={`h-[220px] ss:h-[400px] slide fade ${
         index === currentSlide ? 'block' : 'hidden'
       }`}
     >
@@ -39,12 +39,12 @@ const Slide = ({
               <img
                 src={imdb}
                 alt='imdb_icon'
-                className='w-[30px] ss:w-[50px]'
+                className='w-[20px] ss:w-[40px]'
               />
-              <h4 className='font-primary font-medium text-white text-[15px] ss:text-[22px] ml-3'>
+              <h4 className='font-primary font-medium text-white text-[15px] ss:text-[20px] ml-3'>
                 {vote}
               </h4>
-              <h4 className='font-primary font-medium text-white text-[15px] ss:text-[22px] ml-3'>
+              <h4 className='font-primary font-medium text-white text-[15px] ss:text-[20px] ml-3'>
                 {date}
               </h4>
             </div>
@@ -59,7 +59,7 @@ const Slide = ({
           </div>
 
           <LazyLoadImage
-            className='w-full h-auto object-center object-cover no-repeat slide-img '
+            className='w-full h-[480px] object-center object-cover no-repeat slide-img '
             src={poster}
             alt={title}
           />

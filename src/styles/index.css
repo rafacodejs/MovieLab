@@ -10,12 +10,13 @@ body {
 
 .text-gradient {
   background: radial-gradient(
-    circle farthest-side at left center,
-    #991eeb 0%,
-    #820dcf 25%,
-    #8003d3 50%,
-    #9b1af1 75%,
-    #5822b4 100%
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

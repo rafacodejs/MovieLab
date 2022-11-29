@@ -1,42 +1,33 @@
 import { Vote, CardButton } from '../index';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import styles from '../../styles/styles';
 
 const Card = ({ id, title, poster, date, vote, media, mediaDefault }) => {
   return (
-    <div
-      className={`${styles.flexStartX} flex-col w-[340px] h-[200px] ss:w-[380px] ss:h-[220px] whitespace-normal bg-dimDark rounded-[12px] shadow-5xl sm:mr-2 ml-3 hover:bg-blackHover `}
-    >
-      <div className='max-w-[380px] max-h-[380px] w-[340px] h-[200px] sm:w-[380px] sm:h-[220px] p-2'>
+    <div className='w-[350px] h-[200px] ss:w-[380px] ss:h-[230px] flex flex-row justify-start items-start whitespace-normal bg-[#272f46] rounded-[12px] shadow-6xl mr-2 ml-3'>
+      <div className='m-w-[160px] w-[135px] ss:w-[160px] max-h-[250px] ss:h-[200px] p-2'>
         <LazyLoadImage
           src={poster}
           alt={title}
-          className='rounded-[8px] object-center repeat bg-no-repeat'
+          className='rounded-[8px] object-center object-cover repeat bg-no-repeat'
           loading='lazy'
         />
-        <div
-          className={`parent items-center relative w-full h-[80px] blur-card bottom-[80px] rounded-b-[8px]`}
-        >
-          <CardButton id={id} media={media} mediaDefault={mediaDefault} />
-          <div className='flex flex-col ml-5 border-r-1 border-white'>
-            <h3 className='text-[20px] font-primary font-semibold line-clamp-1'>
-              {title}
-            </h3>
-            <div className='flex flex-row'>
-              <div className={`${styles.flexCenter}`}>
-                <Vote vote={vote} />
-              </div>
-              <h5 className='text-[16px] font-primary font-normal mt-1 ml-2'>
-                {vote}
-              </h5>
-            </div>
-          </div>
-          <div className=''>
-            <h4 className='text-[16px] font-primary font-normal mt-1'>
-              {date}
-            </h4>
-          </div>
+      </div>
+      <div className='w-[50%] p-4 flex flex-col justify-start items-start'>
+        <h1 className='w-[150px] ss:w-[200px] font-primary font-bold text-[18px] ss:text-[19px] text-white'>
+          {title}
+        </h1>
+        <h4 className='font-primary text-dimWhite text-[14px] ss:text-[16px] mt-1'>
+          {date}
+        </h4>
+
+        <div className='flex flex-row w-[30%] mt-1'>
+          <Vote vote={vote} />
+          <h4 className='ml-3 font-primary text-dimWhite text-[13px] ss:text-[16px] mt-0  ss:mt-1'>
+            {vote}
+          </h4>
         </div>
+
+        <CardButton id={id} media={media} mediaDefault={mediaDefault} />
       </div>
     </div>
   );

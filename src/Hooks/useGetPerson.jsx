@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { API } from '../API';
 
-const useGetPerson = ({ id }) => {
+const useGetPerson = (id) => {
   const [person, setPerson] = useState([]);
   const [result, setResults] = useState([]);
 
   useEffect(() => {
-    const fetchDetails = async () => {
+    const fetchPerson = async () => {
       const personRes = await API(`/person/${id}`);
       const resultRes = await API(`/person/${id}/combined_credits`);
 
@@ -18,7 +18,7 @@ const useGetPerson = ({ id }) => {
       setResults(resultData);
     };
 
-    fetchDetails();
+    fetchPerson();
   }, []);
 
   return { person, result };

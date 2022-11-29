@@ -60,7 +60,7 @@ const CarouselCard = ({ data, mediaDefault, title, subTitle }) => {
       </div>
 
       <div
-        className='w-full h-full flex flex-row mt-6 scroll-smooth whitespace-nowrap ss:snap-mandatory overflow-x-auto md:overflow-hidden'
+        className='w-full h-[250px] flex items-center flex-row mt-6 scroll-smooth whitespace-nowrap ss:snap-mandatory overflow-x-auto md:overflow-hidden'
         ref={containerRef}
       >
         {data.map((item) => (
@@ -70,8 +70,8 @@ const CarouselCard = ({ data, mediaDefault, title, subTitle }) => {
             title={item.name || item.title}
             poster={
               item.poster_path !== null && item.profile_path !== null
-                ? `https://image.tmdb.org/t/p/original${
-                    item.backdrop_path || item.poster_path
+                ? `https://image.tmdb.org/t/p/w500${
+                    item.poster_path || item.profile_path
                   }`
                 : notPoster
             }

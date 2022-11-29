@@ -34,7 +34,7 @@ const Cast = ({ data, title }) => {
   };
 
   return (
-    <div className='relative ss:h-[450px] w-[100%] ss:w-[90%]'>
+    <div className='relative ss:h-[450px] w-[100%] ss:w-[90%] sd:mt-20 md:mt-14'>
       <div className='flex flex-row justify-between items-center'>
         <div className='w-[80%] flex flex-col justify-start items-start px-2'>
           <h1 className='text-[24px] sm:text-[34px] font-primary font-bold text-white ml-3 ss:ml-0'>

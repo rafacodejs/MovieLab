@@ -9,7 +9,7 @@ const Slider = ({ data }) => {
 
   const autoScroll = true;
   let slideInterval;
-  let intervalTime = 8000;
+  let intervalTime = 4000;
 
   const nextSlide = () => {
     setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
@@ -35,7 +35,7 @@ const Slider = ({ data }) => {
   }, [currentSlide]);
 
   return (
-    <div className='relative w-full h-auto xs:h-[300px] ss:h-[380px] sm:h-[400px] md:h-[600px] overflow-hidden scroll-smooth shadow-5xl slide-container'>
+    <div className='relative w-[90%] ss:w-[90%] overflow-hidden rounded-[10px] scroll-smooth shadow-5xl slide-container'>
       <div className={`${styles.navigation} navigation z-30`}>
         <span className={`${styles.PrevNext} rounded-r-lg`}>
           <IoIosArrowBack

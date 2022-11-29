@@ -8,7 +8,7 @@ const Header = () => {
         className={`w-full flex flex-col ss:flex-row justify-between items-center ${styles.padding}`}
       >
         <div>
-          <h1 className='text-2xl md:text-3xl font-primary font-bold text-white'>
+          <h1 className='text-2xl md:text-3xl font-primary font-bold text-gradient'>
             MOVIELAB
           </h1>
         </div>

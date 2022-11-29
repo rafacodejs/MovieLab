@@ -12,16 +12,24 @@ import {
 } from './index';
 import { Header, TabBar } from '../components';
 
+
 const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <section>
+    <main>
       <HashRouter>
         <div className='hidden sd:block'>
           <Header />
+        </div>
+        <div
+          className={`w-full flex sd:hidden justify-center items-center p-5 text`}
+        >
+          <h1 className='text-3xl font-primary font-bold text-gradient'>
+            MOVIELAB
+          </h1>
         </div>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -37,7 +45,7 @@ const App = () => {
           <TabBar />
         </div>
       </HashRouter>
-    </section>
+    </main>
   );
 };
 

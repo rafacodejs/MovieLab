@@ -1,11 +1,11 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaPlay } from 'react-icons/fa';
-import styles from '../../styles/styles';
 
 const CardButton = ({ id, media, mediaDefault }) => {
   return (
     <button
-      className={`${styles.flexCenter} w-[35px] h-[35px] ml-4 blur-button hover:bg-primary duration-300 transition-all ease-in-out rounded-full`}
+      className='w-[100px] h-[30px] ss:w-[125px] ss:h-[40px] mt-3 ss:mt-4 bg-primary rounded-full text-black font-primary font-medium text-[12px] ss:text-[14px] sm:text-[16px] cursor-pointer shadow-5xl'
+      onClick={() => window.location.reload()}
     >
       <Link
         to={
@@ -14,9 +14,7 @@ const CardButton = ({ id, media, mediaDefault }) => {
             : `/details/${media}/${id}`
         }
       >
-        <div className='text-[16px]'>
-          <FaPlay />
-        </div>
+        See details
       </Link>
     </button>
   );
