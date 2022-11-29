@@ -30,7 +30,7 @@ const PosterCarousel = ({
         }
       >
         <LazyLoadImage
-          src={poster !== null ? poster : notPoster}
+          src={poster !== null || undefined ? poster : notPoster}
           alt={title}
           className='w-[150px] h-[220px] ss:w-[220px] ss:h-[260px] rounded-t-[14px] ss:mt-6 cursor-pointer'
           loading='lazy'
@@ -41,7 +41,7 @@ const PosterCarousel = ({
         <div className='w-[50px] ss:w-[100px] h-[60px] ss:h-[67px] flex justify-center items-center relative bg-white rounded-bl-[14px]'>
           <button
             //onClick={() => setLiked(item)}
-            className={`liked-btn liked-btn--liked`}
+            className={`liked-btn`}
           ></button>
         </div>
 

@@ -11,27 +11,27 @@ const Details = () => {
 
   return (
     <section
-      className={`${styles.flexCenter} flex-col overflow-hidden relative `}
+      className={`${styles.flexCenter} flex-col overflow-hidden relative`}
     >
       <Banner
         backdrop={
           data.poster_path !== null && data.profile_path !== null
-            ? `https://image.tmdb.org/t/p/original${data.backdrop_path}`
+            ? `https://image.tmdb.org/t/p/original${data?.backdrop_path}`
             : notBanner
         }
         poster={
           data.poster_path !== null && data.profile_path !== null
             ? `https://image.tmdb.org/t/p/w500${
-                data.poster_path || data.profile_path
+                data?.poster_path || data?.profile_path
               }`
             : notPoster
         }
-        title={data.title || data.name}
-        overview={data.overview}
-        date={data.release_date || data.first_air_date}
-        vote={data.vote_average}
+        title={data?.title || data?.name}
+        overview={data?.overview}
+        date={data?.release_date || data?.first_air_date}
+        vote={data?.vote_average}
         genres={genres}
-        home={data.homepage}
+        home={data?.homepage}
       />
 
       <Cast title='Cast 🎭' data={cast} />

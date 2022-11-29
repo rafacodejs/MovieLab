@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { PosterCarousel } from '../index';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+import { notPoster } from '../../assets';
 
 const Carousel = ({ data, title, mediaDefault }) => {
   const containerRef = React.useRef();
@@ -65,7 +66,11 @@ const Carousel = ({ data, title, mediaDefault }) => {
             id={item.id}
             mediaDefault={mediaDefault}
             media={item.media_type}
-            poster={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+            poster={
+              item.poster_path !== null && item.profile_path !== null
+                ? `https://image.tmdb.org/t/p/w500${item.poster_path}`
+                : notPoster
+            }
             title={item.name || item.title}
             vote={item.vote_average.toFixed(1)}
             item={item}

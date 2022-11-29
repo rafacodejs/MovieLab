@@ -6,6 +6,7 @@ import movie from './movie_icon.png';
 import fake from './fake-pic.jpg';
 import notPoster from './no-poster.png';
 import notBanner from './not-banner.jpg';
+import actorBanner from './actorBanner.jpeg';
 import imdb from './imdb_icon.png';
 import reactIcon from './react-icon.png';
 import tailwind from './tailwind-icon.png';
@@ -19,6 +20,7 @@ export {
   movie,
   fake,
   notPoster,
+  actorBanner,
   notBanner,
   imdb,
   reactIcon,

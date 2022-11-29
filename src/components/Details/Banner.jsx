@@ -54,7 +54,7 @@ const Banner = ({
               </h5>
             </div>
             <div className='flex flex-row'>
-              {genres.map((genre) => (
+              {genres?.map((genre) => (
                 <GenreButton id={genre.item} name={genre.name} />
               ))}
             </div>
