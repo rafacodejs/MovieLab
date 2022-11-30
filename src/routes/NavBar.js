@@ -3,7 +3,6 @@ import {
   RiTvLine,
   RiFireLine,
   RiHome3Line,
-  RiSearchLine,
 } from 'react-icons/ri';
 
 export const navLinks = [

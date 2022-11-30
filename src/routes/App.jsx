@@ -1,5 +1,8 @@
-import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useEffect, useContext } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { PrivateRoute } from './PrivateRoute';
+import { UserContext } from '../context/index';
+
 import {
   Home,
   Details,
@@ -9,10 +12,12 @@ import {
   Tv,
   Search,
   Favorites,
-} from './index';
+  Login,
+} from '../pages/index';
 import { Header, TabBar, SearchBar } from '../components';
 
 const App = () => {
+  const { user, details } = useContext(UserContext);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -40,6 +45,24 @@ const App = () => {
           <Route path='/details/:media/:id' element={<Details />} />
           <Route path='/person/:id' element={<Person />} />
           <Route path='/categories/:name/:id' element={<Categories />} />
+          <Route
+            path='/movie-app/favorites'
+            element={
+              <PrivateRoute
+                page={
+                  <SearchCategories
+                    URL={`/account/${details.id}/favorite/movies`}
+                    title='Favorites'
+                  />
+                }
+              />
+            }
+          />
+          <Route
+            path='/movie-app/log-in'
+            element={!user.success && <Login />}
+          />
+          <Route path='*' element={<p>No se encuentra</p>} />
         </Routes>
         <div className='block sd:hidden'>
           <TabBar />
