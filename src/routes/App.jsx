@@ -41,7 +41,7 @@ const App = () => {
           <Route path='/search/:query' element={<Search />} />
           <Route path={`/movie`} element={<Movies />} />
           <Route path={`/tv`} element={<Tv />} />
-          <Route path={`/favorites`} element={<Favorites />} />
+
           <Route path='/details/:media/:id' element={<Details />} />
           <Route path='/person/:id' element={<Person />} />
           <Route path='/categories/:name/:id' element={<Categories />} />
@@ -50,7 +50,7 @@ const App = () => {
             element={
               <PrivateRoute
                 page={
-                  <SearchCategories
+                  <Favorites
                     URL={`/account/${details.id}/favorite/movies`}
                     title='Favorites'
                   />
@@ -59,7 +59,7 @@ const App = () => {
             }
           />
           <Route
-            path='/movie-app/log-in'
+            path='login'
             element={!user.success && <Login />}
           />
           <Route path='*' element={<p>No se encuentra</p>} />
