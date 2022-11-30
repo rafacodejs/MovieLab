@@ -22,6 +22,7 @@ const Person = () => {
           title={person?.name}
           overview={person?.biography}
           date={person?.birthday}
+          home={'person'}
         />
       </div>
       <div className={`${styles.flexCenter} mt-10`}>

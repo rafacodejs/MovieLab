@@ -14,23 +14,24 @@ const TabBar = () => {
             key={link.id}
             className={`${
               styles.flexCenter
-            } flex-col text-[12px] ss:text-[16px] font-primary font-normal ${
+            } flex-col text-[14px] ss:text-[18px] font-primary font-normal ${
               index === tabBar.length - 1
                 ? 'mr-0'
-                : 'mr-8 xs:mr-16 ss:mr-20 mt-1'
+                : 'mr-10 xs:mr-20 ss:mr-28 mt-1'
             } `}
           >
             <NavLink
               className={`${({ isActive }) =>
-                isActive ? 'text-tertiary' : 'text-white'} text-[20px]`}
+                isActive ? 'text-primary' : 'text-white'} text-[20px]`}
               to={link.to}
               end
             >
-              {link.icon}
+           {link.icon}
+            
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                isActive ? 'text-tertiary' : 'text-white'
+                isActive ? 'text-primary' : 'text-white'
               }
               to={link.to}
               end

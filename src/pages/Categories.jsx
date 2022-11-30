@@ -11,7 +11,6 @@ const Categories = () => {
   const { id, name } = useParams();
   const { categoriesMovies, categoriesTv } = useGetCategories({ id, media });
   const navigate = useNavigate();
-  console.log(categoriesMovies);
 
   const back = () => {
     navigate(-1);
@@ -32,7 +31,7 @@ const Categories = () => {
         <div>{''}</div>
       </div>
       <div className='flex fle-row flex-wrap justify-center items-center gap-1 p-0 ss:gap-4 ss:p-2 mb-5'>
-        {categoriesMovies.map((item) => (
+        {categoriesMovies?.map((item) => (
           <section
             className='flex flex-col justify-center items-center w-[160px] h-[300px] ss:w-[200px] ss:h-[350px] animation-img ss:ml-3 mt-0 ss:mt-3'
             key={item.id}
@@ -72,7 +71,7 @@ const Categories = () => {
             </div>
           </section>
         ))}
-        {categoriesTv.map((item) => (
+        {categoriesTv?.map((item) => (
           <section
             className='flex flex-col justify-center items-center w-[160px] h-[300px] ss:w-[200px] ss:h-[350px] animation-img ss:ml-3 mt-0 ss:mt-3'
             key={item.id}

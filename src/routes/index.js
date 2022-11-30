@@ -43,18 +43,12 @@ export const tabBar = [
   },
   {
     id: 3,
-    to: '/search',
-    text: 'Search',
-    icon: RiSearchLine,
-  },
-  {
-    id: 4,
     to: '/tv',
     text: 'Tv Series',
     icon: RiMovie2Line,
   },
   {
-    id: 5,
+    id: 4,
     to: '/favorites',
     text: 'Favorites',
     icon: RiTvLine,

@@ -40,6 +40,9 @@ const Platform = ({ home }) => {
         </a>
       </div>
     );
+  }
+  if (home === 'person') {
+    return <div></div>;
   } else {
     return (
       <div className='w-[70px] mt-3 cursor-pointer '>

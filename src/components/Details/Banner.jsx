@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Vote, Platform, GenreButton } from '../index';
 import styles from '../../styles/styles';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -55,7 +54,7 @@ const Banner = ({
             </div>
             <div className='flex flex-row'>
               {genres?.map((genre) => (
-                <GenreButton id={genre.item} name={genre.name} />
+                <GenreButton id={genre.id} name={genre.name} />
               ))}
             </div>
             <Platform home={home} />

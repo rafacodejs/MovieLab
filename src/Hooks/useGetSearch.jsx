@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { API } from '../API';
 
-const useGetSearch = ({ query }) => {
+const useGetSearch = (query) => {
   const [search, setSearchData] = useState([]);
 
   useEffect(() => {

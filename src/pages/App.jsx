@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
   Home,
   Details,
@@ -10,8 +10,7 @@ import {
   Search,
   Favorites,
 } from './index';
-import { Header, TabBar } from '../components';
-
+import { Header, TabBar, SearchBar } from '../components';
 
 const App = () => {
   useEffect(() => {
@@ -20,16 +19,17 @@ const App = () => {
 
   return (
     <main>
-      <HashRouter>
+      <BrowserRouter>
         <div className='hidden sd:block'>
           <Header />
         </div>
         <div
-          className={`w-full flex sd:hidden justify-center items-center p-5 text`}
+          className={`w-full flex flex-col sd:hidden justify-center items-center p-5 text`}
         >
-          <h1 className='text-3xl font-primary font-bold text-gradient'>
+          <h1 className='text-3xl font-primary font-bold text-gradient mb-2'>
             MOVIELAB
           </h1>
+          <SearchBar />
         </div>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -44,7 +44,7 @@ const App = () => {
         <div className='block sd:hidden'>
           <TabBar />
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </main>
   );
 };
