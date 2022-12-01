@@ -19,9 +19,6 @@ const Header = () => {
           </h1>
         </div>
         <div>
-          <Menu />
-        </div>
-        <div>
           <SearchBar />
         </div>
         <div>

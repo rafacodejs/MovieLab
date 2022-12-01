@@ -2,13 +2,19 @@ import { useContext } from 'react';
 import { UserContext } from '../context';
 import { CarouselFav } from '../components';
 
-const Favorites = ({ media }) => {
+const Favorites = () => {
   const { user, details } = useContext(UserContext);
   return (
     <div>
       {' '}
-      <CarouselFav URLMovies={`/account/${details.id}/favorite/movies`} />
-      <CarouselFav URLMovies={`/account/${details.id}/favorite/tv`} />
+      <CarouselFav
+        title='Favorites Movies'
+        URL={`/account/${details.id}/favorite/movies`}
+      />
+      <CarouselFav
+        title='Favorites Tv Series'
+        URL={`/account/${details.id}/favorite/tv`}
+      />
     </div>
   );
 };

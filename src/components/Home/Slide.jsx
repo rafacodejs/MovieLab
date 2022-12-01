@@ -18,7 +18,7 @@ const Slide = ({
 
   return (
     <div
-      className={`h-[220px] ss:h-[400px] slide fade ${
+      className={`h-[220px] ss:h-[370px] slide fade ${
         index === currentSlide ? 'block' : 'hidden'
       }`}
     >
@@ -59,7 +59,7 @@ const Slide = ({
           </div>
 
           <LazyLoadImage
-            className='w-full h-[480px] object-center object-cover no-repeat slide-img '
+            className='w-full h-[370px] object-center object-cover no-repeat slide-img '
             src={poster}
             alt={title}
           />

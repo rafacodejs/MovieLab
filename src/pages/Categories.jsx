@@ -1,4 +1,8 @@
+import { useState, useContext, useEffect } from 'react';
+import { API } from '../API';
+import { UserContext } from '../context/index';
 import { useGetCategories } from '../Hooks/useGetCategories';
+import { Liked } from '../components';
 import { Link } from 'react-router-dom';
 import { useParams, useNavigate } from 'react-router-dom';
 import styles from '../styles/styles';
@@ -15,6 +19,23 @@ const Categories = () => {
   const back = () => {
     navigate(-1);
   };
+
+  const [like, setLike] = useState(false);
+
+  const { user } = useContext(UserContext);
+
+  useEffect(() => {
+    const movieLiked = async () => {
+      const { data } = await API.get(
+        `/${media}/${id}/account_states?session_id=${user.session_id}`
+      );
+      setLike(data.favorite);
+    };
+
+    if (user.success) {
+      movieLiked();
+    }
+  }, []);
 
   return (
     <div className='w-full'>
@@ -52,7 +73,13 @@ const Categories = () => {
             </Link>
             <div className='w-[150px] ss:w-full flex flex-row h-[60px] ss:h-[100px] relative bg-blackHover rounded-b-[14px]'>
               <div className='w-[50px] ss:w-[100px] h-[60px] ss:h-[67px] flex justify-center items-center relative bg-white rounded-bl-[14px]'>
-                <button className='liked-btn'></button>
+                <Liked
+                  id={item.id}
+                  like={like}
+                  setLike={setLike}
+                  media={item.media_type}
+                  item={item}
+                />
               </div>
 
               <div className='w-[90px] ss:w-[100px] mt-2 ml-2 mr-3'>
@@ -92,7 +119,13 @@ const Categories = () => {
             </Link>
             <div className='w-[150px] ss:w-full flex flex-row h-[60px] ss:h-[100px] relative bg-blackHover rounded-b-[14px]'>
               <div className='w-[50px] ss:w-[100px] h-[60px] ss:h-[67px] flex justify-center items-center relative bg-white rounded-bl-[14px]'>
-                <button className='liked-btn'></button>
+                <Liked
+                  id={item.id}
+                  like={like}
+                  setLike={setLike}
+                  media={item.media_type}
+                  item={item}
+                />
               </div>
 
               <div className='w-[90px] ss:w-[100px] mt-2 ml-2 mr-3'>

@@ -1,20 +1,23 @@
 import { useContext } from 'react';
-import { useGetFavorites } from '../Hooks/useGetFavorites';
+import { useGetFavorites } from '../../Hooks/useGetFavorites';
 import { NewPoster } from './NewPoster';
-import { UserContext } from '../context';
-import { notPoster } from '../assets';
+import { UserContext } from '../../context';
+import { notPoster } from '../../assets';
+import styles from '../../styles/styles';
 
-const CarouselFav = ({ URLMovies }) => {
+const CarouselFav = ({ URL, title }) => {
   const { user } = useContext(UserContext);
 
-  const { dataMovies } = useGetFavorites(URLMovies, user.session_id);
+  const { dataMovies } = useGetFavorites(URL, user.session_id);
 
   console.log(dataMovies);
 
   return (
-    <section>
-      <div>
-        <h2>Favorites</h2>
+    <section className={`${styles.flexCenter} flex-col`}>
+      <div className='mt-14'>
+        <h2 className='font-primary font-bold text-gradient text-[32px]'>
+          {title}
+        </h2>
       </div>
 
       {dataMovies.map((item) => (

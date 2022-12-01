@@ -17,13 +17,21 @@ const Profile = () => {
     }
   };
   return (
-    <div onClick={handleClick} className={`${styles.flexCenter}`}>
-      <p className='text-[18px] font-primary font-medium'>{details.username}</p>
+    <div
+      onClick={handleClick}
+      className={`${styles.flexCenter} flex-col sd:flex-row`}
+    >
+      <p className='hidden sd:block text-[18px] font-primary font-medium'>
+        {details.username}
+      </p>
       <img
         src={`https://www.gravatar.com/avatar/${details.avatar?.gravatar.hash}`}
         alt={details.username}
-        className='w-[30px] ml-2 rounded-full cursor-pointer'
+        className='w-[22px] ss:w-[25px] ml-2 rounded-full cursor-pointer'
       />
+      <p className='sd:hidden text-[14px] ss:text-[18px] font-primary font-normal'>
+        {details.username}
+      </p>
     </div>
   );
 };

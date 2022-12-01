@@ -1,5 +1,5 @@
 import { useEffect, useContext } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PrivateRoute } from './PrivateRoute';
 import { UserContext } from '../context/index';
 
@@ -14,7 +14,7 @@ import {
   Favorites,
   Login,
 } from '../pages/index';
-import { Header, TabBar, SearchBar } from '../components';
+import { Header, TabBar, SearchBar, Menu } from '../components';
 
 const App = () => {
   const { user, details } = useContext(UserContext);
@@ -37,6 +37,9 @@ const App = () => {
           </h1>
           <SearchBar />
         </div>
+        <section className='hidden sm:flex justify-center items-center'>
+          <Menu />
+        </section>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/search/:query' element={<Search />} />

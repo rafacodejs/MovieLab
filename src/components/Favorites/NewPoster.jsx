@@ -1,6 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styles from '../styles/styles';
+import styles from '../../styles/styles';
 
 const NewPoster = ({ id, media, poster, title, vote, overview }) => {
   return (
@@ -13,7 +11,7 @@ const NewPoster = ({ id, media, poster, title, vote, overview }) => {
             className='w-[200px] object-cover rounded-lg'
           />
         </div>
-        <div>
+        <div className={`${styles.flexStartX} flex-col`}>
           <h1>{title}</h1>
           <p>{overview}</p>
         </div>

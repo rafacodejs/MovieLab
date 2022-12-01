@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import { API } from '../API';
-import { UserContext } from '../context/index';
-import styles from '../styles/styles';
+import { API } from '../../API';
+import { UserContext } from '../../context/index';
+import styles from '../../styles/styles';
 
 const Liked = ({ id, like, setLike, media }) => {
   const { details, user } = useContext(UserContext);

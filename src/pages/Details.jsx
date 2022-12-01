@@ -8,6 +8,7 @@ import { notBanner, notPoster } from '../assets';
 const Details = () => {
   const { id, media } = useParams();
   const { data, genres, cast, recommended } = useGetDetails({ id, media });
+  window.scrollTo(0, 0);
 
   return (
     <section

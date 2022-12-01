@@ -14,22 +14,24 @@ const SearchBar = () => {
     window.location.reload();
   };
   return (
-    <form>
-      <div className={`${styles.flexCenter} flex-row`}>
-        <input
-          type='text'
-          className='bg-primary relative w-[250px] ss:w-[300px] md:w-[250px] h-[50px] rounded-[30px] outline-none font-primary font-normal text-[18px] text-black p-5 shadow-5xl focus:border-tertiary placeholder:text-black '
-          placeholder='Search'
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <div className='flex justify-end items-center'>
-          <button
-            className='flex justify-center items-center absolute w-[55px] h-[50px] bg-dimDark rounded-r-[30px] text-[24px] text-white shadow-5xl cursor-pointer'
-            onClick={handleSubmit}
-          >
-            <FaSearch />
-          </button>
+    <form onSubmit={handleSubmit}>
+      <div
+        className={`${styles.flexCenter} flex-row mt-2 sm:mt-0 ss:ml-16 sm:ml-0 sm:mr-20`}
+      >
+        <button
+          className='w-[55px] h-[45px] mr-2 ss:mr-3 bg-primary rounded-full text-[24px] shadow-5xl '
+          onClick={handleSubmit}
+        >
+          <FaSearch className='relative top-[1px] left-[12px] cursor-pointer' />
+        </button>
+        <div className='w-full'>
+          <input
+            type='text'
+            className='relative w-[250px] ss:w-[300px] md:w-[500px] h-[50px] rounded-[30px] outline-none font-primary font-normal text-[18px] text-black p-5 shadow-5xl focus:border-tertiary '
+            placeholder='Search'
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
         </div>
       </div>
     </form>

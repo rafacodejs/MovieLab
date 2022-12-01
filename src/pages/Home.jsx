@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <section className={`${styles.flexCenter} flex-col`}>
-      <div className='w-[90%] ss:w-[100%] flex flex-col justify-center items-start ss:items-center mb-2 ss:p-0'>
+      <div className='w-[90%] ss:w-[100%] flex flex-col justify-center items-start ss:items-center mb-2 ss:p-0 mt-2'>
         <h1 className='font-primary font-bold text-[24px] sm:text-[30px] md:text-[38px] text-white'>
           Explorer
           <span className='text-gradient'> Top Movies & TV Series</span> Around

@@ -16,10 +16,10 @@ import { Footer } from './Footer';
 import { Banner } from './Details/Banner';
 import { Cast } from './Details/Cast';
 import { Platform } from './Details/Platform';
-import { Liked } from './Liked';
+import { Liked } from './Favorites/Liked';
 import { Profile } from './Header/Profile';
-import { CarouselFav } from './CarouselFav';
-import { NewPoster } from './NewPoster';
+import { CarouselFav } from './Favorites/CarouselFav';
+import { NewPoster } from './Favorites/NewPoster';
 
 export {
   Header,
