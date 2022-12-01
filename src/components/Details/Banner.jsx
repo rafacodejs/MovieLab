@@ -52,7 +52,7 @@ const Banner = ({
                 {vote}
               </h5>
             </div>
-            <div className='flex flex-row'>
+            <div className='flex flex-row flex-wrap'>
               {genres?.map((genre) => (
                 <GenreButton id={genre.id} name={genre.name} />
               ))}

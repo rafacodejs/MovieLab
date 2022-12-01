@@ -42,7 +42,7 @@ const TabBar = () => {
         {user.success ? (
           <Profile />
         ) : (
-          <button className='flex justify-center items-center mr-4 flex-col font-primary font-normal text-[22px] mt-1 '>
+          <button className='flex justify-center items-center  flex-col font-primary font-normal text-[22px] mt-1 '>
             <AiOutlineUser />
 
             <Link to={`/login`} className='text-[14px] ss:text-[18px]'>
