@@ -19,8 +19,6 @@ import { Header, TabBar, SearchBar } from '../components';
 const App = () => {
   const { user, details } = useContext(UserContext);
 
-  console.log(details);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -50,7 +48,11 @@ const App = () => {
           <Route path='/categories/:name/:id' element={<Categories />} />
           <Route
             path='/favorites'
-            element={<PrivateRoute page={<Favorites URL={details.id} />} />}
+            element={
+              <PrivateRoute
+                page={<Favorites id={details.id} media={details.media_type} />}
+              />
+            }
           />
           <Route path='/login' element={!user.success && <Login />} />
           <Route path='*' element={<p>No se encuentra</p>} />

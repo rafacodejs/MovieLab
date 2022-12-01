@@ -18,6 +18,8 @@ import { Cast } from './Details/Cast';
 import { Platform } from './Details/Platform';
 import { Liked } from './Liked';
 import { Profile } from './Header/Profile';
+import { CarouselFav } from './CarouselFav';
+import { NewPoster } from './NewPoster';
 
 export {
   Header,
@@ -40,4 +42,6 @@ export {
   Platform,
   Liked,
   Profile,
+  CarouselFav,
+  NewPoster,
 };

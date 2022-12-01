@@ -1,10 +1,12 @@
+import { useState, useContext, useEffect } from 'react';
+import { API } from '../../API';
+import { UserContext } from '../../context/index';
 import { Link } from 'react-router-dom';
 import { Liked } from '../index';
 import { notPoster } from '../../assets';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { TiStarFullOutline } from 'react-icons/ti';
 import styles from '../../styles/styles';
-//import { useLocalStorage } from '../../Hooks/useLocalStorage';
 
 const PosterCarousel = ({
   id,
@@ -15,8 +17,23 @@ const PosterCarousel = ({
   vote,
   item,
 }) => {
-  //const key = `liked-${id}`;
-  //const [liked, setLiked] = useLocalStorage(key, {});
+  const [like, setLike] = useState(false);
+
+  const { user } = useContext(UserContext);
+
+  useEffect(() => {
+    const movieLiked = async () => {
+      const { data } = await API.get(
+        `/${media}/${id}/account_states?session_id=${user.session_id}`
+      );
+      setLike(data.favorite);
+    };
+
+    if (user.success) {
+      movieLiked();
+    }
+  }, []);
+
   return (
     <section
       className='flex flex-col justify-center items-center w-[180px] h-[350px] animation-img -mr-4 ss:ml-5 ss-mr-7 p-2 ss:p-0'
@@ -39,7 +56,13 @@ const PosterCarousel = ({
 
       <div className='w-[150px] ss:w-full flex flex-row h-[60px] ss:h-[100px] relative bg-blackHover rounded-b-[14px]'>
         <div className='w-[50px] ss:w-[100px] h-[60px] ss:h-[67px] flex justify-center items-center relative bg-white rounded-bl-[14px]'>
-          <Liked {...item} />
+          <Liked
+            id={id}
+            like={like}
+            setLike={setLike}
+            media={media}
+            item={item}
+          />
         </div>
 
         <div className='w-[90px] ss:w-[100px] mt-2 ml-2 mr-3'>

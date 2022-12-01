@@ -1,10 +1,9 @@
 import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/index';
 import { logout } from '../../utils/authenticate';
+import styles from '../../styles/styles';
 
 const Profile = () => {
-  // const navigate = useNavigate();
   const { user, details, setUser, setDetails } = useContext(UserContext);
   const handleClick = async () => {
     const newUser = {
@@ -18,11 +17,12 @@ const Profile = () => {
     }
   };
   return (
-    <div onClick={handleClick}>
-      <p>{details.username}</p>
+    <div onClick={handleClick} className={`${styles.flexCenter}`}>
+      <p className='text-[18px] font-primary font-medium'>{details.username}</p>
       <img
         src={`https://www.gravatar.com/avatar/${details.avatar?.gravatar.hash}`}
         alt={details.username}
+        className='w-[30px] ml-2 rounded-full cursor-pointer'
       />
     </div>
   );
