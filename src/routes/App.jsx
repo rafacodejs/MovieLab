@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PrivateRoute } from './PrivateRoute';
 import { UserContext } from '../context/index';
@@ -19,9 +19,7 @@ import { Header, TabBar, SearchBar, Menu } from '../components';
 const App = () => {
   const { user, details } = useContext(UserContext);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  window.scrollTo(0, 0);
 
   return (
     <main>

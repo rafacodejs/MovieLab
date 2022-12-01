@@ -7,7 +7,7 @@ import { Carousel, Banner } from '../components';
 const Person = () => {
   const { id } = useParams();
   const { person, result } = useGetPerson(id);
-
+  window.scrollTo(0, 0);
   return (
     <section>
       <div className={`${styles.flexCenter} flex-col overflow-hidden relative`}>

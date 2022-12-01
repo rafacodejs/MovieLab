@@ -7,7 +7,17 @@ body {
   @apply bg-gradient-to-br from-[#282828] to-[#19335a];
   color: #fff;
 }
-
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 1px;
+  background-color: #19335a;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #56e1ea;
+}
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,

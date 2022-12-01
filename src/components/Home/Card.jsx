@@ -2,6 +2,9 @@ import { Vote, CardButton } from '../index';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Card = ({ id, title, poster, date, vote, media, mediaDefault }) => {
+  const newDate = new String(date);
+  var result = newDate.split('-')[0];
+
   return (
     <div className='w-[350px] h-[200px] ss:w-[380px] ss:h-[230px] flex flex-row justify-start items-start whitespace-normal bg-[#272f46] rounded-[12px] shadow-6xl mr-2 ml-3'>
       <div className='m-w-[160px] w-[135px] ss:w-[160px] max-h-[250px] ss:h-[200px] p-2'>
@@ -17,7 +20,7 @@ const Card = ({ id, title, poster, date, vote, media, mediaDefault }) => {
           {title}
         </h1>
         <h4 className='font-primary text-dimWhite text-[14px] ss:text-[16px] mt-1'>
-          {date}
+          {result}
         </h4>
 
         <div className='flex flex-row w-[30%] mt-1'>

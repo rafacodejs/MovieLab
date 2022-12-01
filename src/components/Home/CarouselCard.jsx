@@ -75,7 +75,7 @@ const CarouselCard = ({ data, mediaDefault, title, subTitle }) => {
                   }`
                 : notPoster
             }
-            date={(item.release_date || item.first_air_date).split('-')[0]}
+            date={item.release_date || item.first_air_date}
             vote={item.vote_average.toFixed(1)}
             genre={item.genre_ids}
             media={item?.media_type}
