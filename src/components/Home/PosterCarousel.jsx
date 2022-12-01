@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Vote } from '../index';
+import { Liked } from '../index';
 import { notPoster } from '../../assets';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { TiStarFullOutline } from 'react-icons/ti';
@@ -39,10 +39,7 @@ const PosterCarousel = ({
 
       <div className='w-[150px] ss:w-full flex flex-row h-[60px] ss:h-[100px] relative bg-blackHover rounded-b-[14px]'>
         <div className='w-[50px] ss:w-[100px] h-[60px] ss:h-[67px] flex justify-center items-center relative bg-white rounded-bl-[14px]'>
-          <button
-            //onClick={() => setLiked(item)}
-            className={`liked-btn`}
-          ></button>
+          <Liked {...item} />
         </div>
 
         <div className='w-[90px] ss:w-[100px] mt-2 ml-2 mr-3'>

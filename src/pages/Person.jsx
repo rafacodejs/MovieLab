@@ -7,7 +7,6 @@ import { Carousel, Banner } from '../components';
 const Person = () => {
   const { id } = useParams();
   const { person, result } = useGetPerson(id);
-  console.log(person);
 
   return (
     <section>

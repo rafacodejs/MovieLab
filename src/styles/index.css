@@ -23,6 +23,17 @@ body {
   background-clip: text;
   text-fill-color: transparent;
 }
+.bg-blue-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+}
 .animation-link {
   transition: 0.4s;
 }
@@ -139,5 +150,31 @@ body {
   .banner-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 1fr;
+  }
+}
+
+.cardReview__heart {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+#liked {
+  color: #33bbcf;
+  animation: heartBeat 0.3s;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }

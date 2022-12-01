@@ -12,7 +12,6 @@ const useGetPerson = (id) => {
 
       const personData = personRes.data;
       const resultData = resultRes.data.cast;
-      console.log(personData);
 
       setPerson(personData);
       setResults(resultData);

@@ -16,6 +16,8 @@ import { Footer } from './Footer';
 import { Banner } from './Details/Banner';
 import { Cast } from './Details/Cast';
 import { Platform } from './Details/Platform';
+import { Liked } from './Liked';
+import { Profile } from './Header/Profile';
 
 export {
   Header,
@@ -36,4 +38,6 @@ export {
   Banner,
   Cast,
   Platform,
+  Liked,
+  Profile,
 };

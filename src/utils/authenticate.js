@@ -6,7 +6,7 @@ const signup = async () => {
 };
 
 const login = async ({ username, password }) => {
-  const { data: token } = await api.get('/authentication/token/new');
+  const { data: token } = await API.get('/authentication/token/new');
 
   const { data } = await API.post(`/authentication/token/validate_with_login`, {
     username: username,
