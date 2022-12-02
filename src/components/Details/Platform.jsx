@@ -5,7 +5,7 @@ const Platform = ({ home }) => {
   const url = new String(home);
   var result = url.replace(url.split('.').pop(), '');
 
-  if (result === 'https://www.netflix.') {
+  if (result === 'https://www.netflix.' || 'http://www.netflix.') {
     return (
       <div className='w-[70px] mt-3 cursor-pointer '>
         <a href={home} target='_blank'>
@@ -23,7 +23,7 @@ const Platform = ({ home }) => {
       </div>
     );
   }
-  if (result === 'https://www.amazon.') {
+  if (result === 'https://www.amazon.' || 'http://www.amazon.') {
     return (
       <div className='w-[70px] mt-3 cursor-pointer '>
         <a href={home} target='_blank'>
@@ -32,7 +32,7 @@ const Platform = ({ home }) => {
       </div>
     );
   }
-  if (result === 'https://www.disneyplus.') {
+  if (result === 'https://www.disneyplus.' || 'http://www.disneyplus.') {
     return (
       <div className='w-[70px] mt-3 cursor-pointer '>
         <a href={home} target='_blank'>

@@ -48,7 +48,9 @@ const Categories = () => {
                 media={item.media_type}
                 poster={
                   item.poster_path !== null && item.profile_path !== null
-                    ? `https://image.tmdb.org/t/p/w500${item.poster_path}`
+                    ? `https://image.tmdb.org/t/p/w500${
+                        item.poster_path || item.profile_path
+                      }`
                     : notPoster
                 }
                 title={item.name || item.title}

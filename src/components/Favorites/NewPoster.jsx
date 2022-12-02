@@ -40,7 +40,7 @@ const NewPoster = ({
 
   return (
     <section className={`${styles.flexCenter}`}>
-      <div className='fav-grid bg-dimBlack w-[95%] h-auto sd:h-[420px] mt-10 rounded-xl shadow-5xl'>
+      <div className='fav-grid bg-black-gradient-2 w-[95%] h-auto sd:h-[420px] mt-10 rounded-xl shadow-5xl'>
         <div className='hidden sm:block'>
           <Link
             to={
@@ -52,7 +52,7 @@ const NewPoster = ({
             <LazyLoadImage
               src={poster}
               alt={title}
-              className='w-[240px] object-cover rounded-lg '
+              className='w-[240px] object-cover rounded-lg shadow-5xl '
               loading='lazy'
             />
           </Link>
