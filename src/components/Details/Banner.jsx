@@ -18,7 +18,6 @@ const Banner = ({
   genres,
   home,
   mediaDefault,
-  
 }) => {
   const [like, setLike] = useState(false);
 
@@ -86,7 +85,12 @@ const Banner = ({
             </div>
             <div className={`${styles.flexCenter} flex-row`}>
               <Platform home={home} />
-              <div className='mt-2 ml-2'>
+
+              <div
+                className={`${
+                  media === 'person' ? 'hidden' : 'block'
+                } mt-2 ml-2`}
+              >
                 <Liked
                   id={id}
                   like={like}

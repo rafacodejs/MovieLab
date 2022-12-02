@@ -14,7 +14,7 @@ const Details = () => {
 
   return (
     <section
-      className={`${styles.flexCenter} flex-col overflow-hidden relative`}
+      className={`${styles.flexCenter} flex-col overflow-hidden relative mb-4`}
     >
       {loading ? (
         <Loading />

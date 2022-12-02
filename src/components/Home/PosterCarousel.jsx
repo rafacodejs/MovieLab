@@ -39,7 +39,7 @@ const PosterCarousel = ({
   return (
     <section
       className='flex flex-col justify-center items-center w-[180px] h-[350px] animation-img -mr-4 ss:ml-5 ss-mr-7 p-2 ss:p-0'
-      key={id}
+   
     >
       <Link
         to={

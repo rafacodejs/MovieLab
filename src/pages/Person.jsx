@@ -10,7 +10,7 @@ const Person = () => {
   window.scrollTo(0, 0);
   
   return (
-    <section>
+    <section className='mb-4'>
       <div className={`${styles.flexCenter} flex-col overflow-hidden relative`}>
         <Banner
           backdrop={actorBanner}
@@ -23,6 +23,7 @@ const Person = () => {
           overview={person?.biography}
           date={person?.birthday}
           home={'person'}
+          media={'person'}
         />
       </div>
       <div className={`${styles.flexCenter} mt-10`}>

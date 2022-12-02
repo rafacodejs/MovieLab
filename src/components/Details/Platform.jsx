@@ -2,12 +2,10 @@ import React from 'react';
 import { netflix, hbo, disney, prime, movie } from '../../assets';
 
 const Platform = ({ home }) => {
-  console.log(home);
   const url = new String(home);
   var result = url.replace(url.split('.').pop(), '');
 
-  if (result === 'https://www.netflix.' || 
-      result === 'http://www.netflix.') {
+  if (result === 'https://www.netflix.' || result === 'http://www.netflix.') {
     return (
       <div className='w-[70px] mt-3 cursor-pointer '>
         <a href={home} target='_blank'>
@@ -16,8 +14,7 @@ const Platform = ({ home }) => {
       </div>
     );
   }
-  if (result === 'https://www.hbo.' || 
-      result === 'http://www.hbo.') {
+  if (result === 'https://www.hbo.' || result === 'http://www.hbo.') {
     return (
       <div className='w-[70px] mt-3 cursor-pointer '>
         <a href={home} target='_blank'>
@@ -26,8 +23,7 @@ const Platform = ({ home }) => {
       </div>
     );
   }
-  if (result === 'https://www.amazon.' || 
-      result === 'http://www.amazon.') {
+  if (result === 'https://www.amazon.' || result === 'http://www.amazon.') {
     return (
       <div className='w-[70px] mt-3 cursor-pointer '>
         <a href={home} target='_blank'>
