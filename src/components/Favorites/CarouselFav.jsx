@@ -10,8 +10,6 @@ const CarouselFav = ({ URL, title }) => {
 
   const { dataMovies } = useGetFavorites(URL, user.session_id);
 
-  console.log(dataMovies);
-
   return (
     <section className={`${styles.flexCenter} flex-col`}>
       <div className='mt-14'>

@@ -24,7 +24,9 @@ const PosterCarousel = ({
   useEffect(() => {
     const movieLiked = async () => {
       const { data } = await API.get(
-        `/${media}/${id}/account_states?session_id=${user.session_id}`
+        `/${media || mediaDefault}/${id}/account_states?session_id=${
+          user.session_id
+        }`
       );
       setLike(data.favorite);
     };
@@ -60,7 +62,7 @@ const PosterCarousel = ({
             id={id}
             like={like}
             setLike={setLike}
-            media={media}
+            media={media || mediaDefault}
             item={item}
           />
         </div>

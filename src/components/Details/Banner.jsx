@@ -54,7 +54,7 @@ const Banner = ({
             </div>
             <div className='flex flex-row flex-wrap'>
               {genres?.map((genre) => (
-                <GenreButton id={genre.id} name={genre.name} />
+                <GenreButton key={genre.id} id={genre.id} name={genre.name} />
               ))}
             </div>
             <Platform home={home} />

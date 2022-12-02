@@ -1,5 +1,5 @@
-import styles from '../styles/styles';
-import { reactIcon, tailwind, tmdb } from '../assets';
+import styles from '../../styles/styles';
+import { reactIcon, tailwind, tmdb } from '../../assets';
 
 const Footer = () => {
   return (
