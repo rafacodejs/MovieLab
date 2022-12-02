@@ -13,7 +13,7 @@ const Categories = () => {
     media,
   });
   const navigate = useNavigate();
-
+  window.scrollTo(0, 0);
   const back = () => {
     navigate(-1);
   };

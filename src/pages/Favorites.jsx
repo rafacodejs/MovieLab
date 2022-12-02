@@ -3,7 +3,8 @@ import { UserContext } from '../context';
 import { CarouselFav } from '../components';
 
 const Favorites = () => {
-  const {  details } = useContext(UserContext);
+  const { details } = useContext(UserContext);
+  window.scrollTo(0, 0);
   return (
     <div>
       {' '}

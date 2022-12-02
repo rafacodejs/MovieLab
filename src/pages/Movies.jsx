@@ -11,6 +11,8 @@ const Movies = () => {
     topMoviesRatedData,
     categoryMoviesData,
   } = useGetMovies();
+
+  window.scrollTo(0, 0);
   return (
     <section className={`${styles.flexCenter} flex-col`}>
       <div className='w-[90%] ss:w-[100%] flex flex-col justify-center items-start ss:items-center mb-2 ss:p-0'>

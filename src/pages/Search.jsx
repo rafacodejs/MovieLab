@@ -13,6 +13,7 @@ const Search = () => {
   const back = () => {
     navigate(-1);
   };
+  window.scrollTo(0, 0);
 
   return (
     <div className='w-full'>

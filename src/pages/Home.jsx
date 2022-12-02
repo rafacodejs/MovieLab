@@ -12,6 +12,7 @@ const Home = () => {
     categoryTvData,
     loading,
   } = useGetHome();
+  window.scrollTo(0, 0);
 
   return (
     <section className={`${styles.flexCenter} flex-col`}>

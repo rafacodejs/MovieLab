@@ -20,6 +20,7 @@ const Login = () => {
       navigate('/');
     }
   };
+  window.scrollTo(0, 0);
   const back = () => {
     navigate(-1);
   };
