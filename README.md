@@ -1,6 +1,6 @@
 # [MovieLab](https://themovielab.netlify.app/) | [<img src="https://i.postimg.cc/5NBMxTJX/github.png" alt="GitHub" height="20px"/>](https://github.com/rafacodejs) | [<img src="https://i.postimg.cc/J7BLFtdc/linkedin.png" alt="Linkedin" height="20px"/>](https://www.linkedin.com/in/rafacodejs/) | [<img src="https://i.postimg.cc/65TVxg9t/world-globe.png" alt="Portafolio Web" height="20px"/>](https://rafaelmalpica.netlify.app/)
 
-[![Movie-Lab-cover.jpg](https://i.postimg.cc/tC9S126x/Movie-Lab-cover.jpg)](https://themovielab.netlify.app/)
+[![Movie-Lab-cover.jpg](https://i.postimg.cc/bYCMynfQ/Img1.jpg)](https://themovielab.netlify.app/)
 
 ## 📜 Resumen 📜
 
@@ -60,7 +60,7 @@ Descubre las mejores películas, series, estrenos, y reviews en MovieLab. Proyec
       </td>
        <td>
         <img
-          src="https://i.postimg.cc/t47v8MVW/1280px-Tmdb-new-logo-svg.png" width="100%" />
+          src="https://i.postimg.cc/t47v8MVW/1280px-Tmdb-new-logo-svg.png" width="90%" />
       </td>
     </tr>
   </tbody>
