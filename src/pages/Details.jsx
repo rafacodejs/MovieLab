@@ -15,6 +15,7 @@ const Details = () => {
       className={`${styles.flexCenter} flex-col overflow-hidden relative`}
     >
       <Banner
+        id={data.id}
         backdrop={
           data.poster_path !== null && data.profile_path !== null
             ? `https://image.tmdb.org/t/p/original${data?.backdrop_path}`
@@ -33,6 +34,9 @@ const Details = () => {
         vote={data?.vote_average}
         genres={genres}
         home={data?.homepage}
+        media={media}
+        mediaDefault=''
+        item={data}
       />
 
       <Cast title='Cast 🎭' data={cast} />

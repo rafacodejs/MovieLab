@@ -3,7 +3,7 @@ import { API } from '../../API';
 import { UserContext } from '../../context/index';
 import { Link } from 'react-router-dom';
 import { Liked } from '../index';
-import { notPoster } from '../../assets';
+import { notPoster, fake } from '../../assets';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { TiStarFullOutline } from 'react-icons/ti';
 import styles from '../../styles/styles';
@@ -49,7 +49,7 @@ const PosterCarousel = ({
         }
       >
         <LazyLoadImage
-          src={poster !== null || undefined ? poster : notPoster}
+          src={poster !== null || undefined ? poster : notPoster || fake}
           alt={title}
           className='w-[150px] h-[220px] ss:w-[220px] ss:h-[260px] rounded-t-[14px] ss:mt-6 cursor-pointer'
           loading='lazy'

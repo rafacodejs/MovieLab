@@ -1,9 +1,14 @@
-import React from 'react';
-import { Vote, Platform, GenreButton } from '../index';
+import { useContext, useState, useEffect } from 'react';
+import { UserContext } from '../../context';
+import { API } from '../../API';
+import { Vote, Platform, GenreButton, Liked } from '../index';
 import styles from '../../styles/styles';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Banner = ({
+  id,
+  media,
+  item,
   backdrop,
   title,
   poster,
@@ -12,7 +17,28 @@ const Banner = ({
   vote,
   genres,
   home,
+  mediaDefault,
 }) => {
+  console.log(media);
+  const [like, setLike] = useState(false);
+
+  const { user } = useContext(UserContext);
+
+  useEffect(() => {
+    const movieLiked = async () => {
+      const { data } = await API.get(
+        `/${media || mediaDefault}/${id}/account_states?session_id=${
+          user.session_id
+        }`
+      );
+      setLike(data.favorite);
+    };
+
+    if (user.success) {
+      movieLiked();
+    }
+  }, []);
+
   return (
     <section className={` flex-col mb-14`}>
       <div
@@ -24,6 +50,7 @@ const Banner = ({
           className='max-h-[600px] h-[450px] sd:h-[600px] w-[1500px] object-cover'
         />
       </div>
+
       <div className='hidden sd:block absolute w-full h-[350px] ss:h-[600px] bg-black opacity-40 ' />
 
       <div className={`${styles.flexCenter} mt-0 md:mt-14`}>
@@ -58,8 +85,26 @@ const Banner = ({
               ))}
             </div>
             <Platform home={home} />
+            <div className='sm:hidden block absolute right-12 top-2 z-90'>
+              <Liked
+                id={id}
+                like={like}
+                setLike={setLike}
+                media={media || mediaDefault}
+                item={item}
+              />
+            </div>
           </div>
         </div>
+      </div>
+      <div className='hidden sm:block absolute right-10 top-10 z-90'>
+        <Liked
+          id={id}
+          like={like}
+          setLike={setLike}
+          media={media || mediaDefault}
+          item={item}
+        />
       </div>
     </section>
   );
