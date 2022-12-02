@@ -4,7 +4,7 @@
 
 ## 📜 Resumen 📜
 
-Descubre las mejores películas, series, estrenos, y reviews en MovieLab. Proyecto construido con la API de TheMovieBD, utilizando las async functions de JavaScript, manipulación de DOM, navegación de una SPA y slider automáticos.
+Descubre las mejores películas, series, estrenos, y reviews en MovieLab. Proyecto construido con la API de TheMovieBD, utilizando las async functions dy axios para el fetch de los datos, manipulación de DOM, navegación de una SPA con React Router Dom, slider automáticos con useRef, manejando el estado de la autenticación de cuenta para persistir los datos y crear un secciones de favoritos.
 
 ## 💻 Si quieres ver el código en tu computadora solo debes hacer esta instalación 💻
 
