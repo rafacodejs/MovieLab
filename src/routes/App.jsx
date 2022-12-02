@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { PrivateRoute } from './PrivateRoute';
 import { UserContext } from '../context/index';
 
@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <main>
-      <BrowserRouter>
+      <HashRouter>
         <div className='hidden sd:block'>
           <Header />
         </div>
@@ -61,7 +61,7 @@ const App = () => {
         <div className='block sd:hidden'>
           <TabBar />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </main>
   );
 };
