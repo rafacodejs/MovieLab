@@ -19,7 +19,6 @@ const Banner = ({
   home,
   mediaDefault,
 }) => {
-  console.log(media);
   const [like, setLike] = useState(false);
 
   const { user } = useContext(UserContext);
@@ -84,27 +83,20 @@ const Banner = ({
                 <GenreButton key={genre.id} id={genre.id} name={genre.name} />
               ))}
             </div>
-            <Platform home={home} />
-            <div className='sm:hidden block absolute right-12 top-2 z-90'>
-              <Liked
-                id={id}
-                like={like}
-                setLike={setLike}
-                media={media || mediaDefault}
-                item={item}
-              />
+            <div className={`${styles.flexCenter} flex-row`}>
+              <Platform home={home} />
+              <div className='mt-2 ml-2'>
+                <Liked
+                  id={id}
+                  like={like}
+                  setLike={setLike}
+                  media={media || mediaDefault}
+                  item={item}
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className='hidden sm:block absolute right-10 top-10 z-90'>
-        <Liked
-          id={id}
-          like={like}
-          setLike={setLike}
-          media={media || mediaDefault}
-          item={item}
-        />
       </div>
     </section>
   );

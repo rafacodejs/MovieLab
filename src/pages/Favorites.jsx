@@ -3,17 +3,19 @@ import { UserContext } from '../context';
 import { CarouselFav } from '../components';
 
 const Favorites = () => {
-  const { user, details } = useContext(UserContext);
+  const {  details } = useContext(UserContext);
   return (
     <div>
       {' '}
       <CarouselFav
         title='Favorites Movies'
         URL={`/account/${details.id}/favorite/movies`}
+        mediaDefault='movie'
       />
       <CarouselFav
         title='Favorites Tv Series'
         URL={`/account/${details.id}/favorite/tv`}
+        mediaDefault='tv'
       />
     </div>
   );
