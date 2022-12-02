@@ -56,7 +56,7 @@ const PosterCarousel = ({
         />
       </Link>
 
-      <div className='w-[150px] ss:w-full flex flex-row h-[60px] ss:h-[100px] relative bg-blackHover rounded-b-[14px]'>
+      <div className='w-[150px] ss:w-full flex flex-row h-[60px] ss:h-[100px] relative bg-black-gradient rounded-b-[14px]'>
         <div className='w-[50px] ss:w-[100px] h-[60px] ss:h-[67px] flex justify-center items-center relative bg-white rounded-bl-[14px]'>
           <Liked
             id={id}

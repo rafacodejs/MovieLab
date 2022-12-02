@@ -8,6 +8,7 @@ const useGetHome = () => {
   const [tvData, setTv] = useState([]);
   const [categoryMovieData, setCategoryMovie] = useState([]);
   const [categoryTvData, setCategoryTv] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchHome = async () => {
@@ -32,7 +33,7 @@ const useGetHome = () => {
       setCategoryMovie(CategoryMovies);
       setCategoryTv(CategoryTv);
     };
-
+    setLoading(false);
     fetchHome();
   }, []);
 
@@ -43,6 +44,7 @@ const useGetHome = () => {
     tvData,
     categoryMovieData,
     categoryTvData,
+    loading,
   };
 };
 

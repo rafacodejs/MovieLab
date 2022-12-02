@@ -10,6 +10,7 @@ const Home = () => {
     tvData,
     categoryMovieData,
     categoryTvData,
+    loading,
   } = useGetHome();
 
   return (
@@ -24,7 +25,7 @@ const Home = () => {
           From you phone at this website
         </p>
       </div>
-      <Slider data={sliderData} />
+      <Slider data={sliderData} loading={loading} />
       <CarouselCard
         title='Trends🔥'
         subTitle='See our hot trends about all kind of content that you like'

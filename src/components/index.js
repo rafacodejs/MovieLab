@@ -20,6 +20,7 @@ import { Liked } from './Favorites/Liked';
 import { Profile } from './Header/Profile';
 import { CarouselFav } from './Favorites/CarouselFav';
 import { NewPoster } from './Favorites/NewPoster';
+import { Loading } from './Loading';
 
 export {
   Header,
@@ -44,4 +45,5 @@ export {
   Profile,
   CarouselFav,
   NewPoster,
+  Loading,
 };

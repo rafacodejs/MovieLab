@@ -6,6 +6,7 @@ const useGetDetails = ({ id, media }) => {
   const [genres, setTest] = useState([]);
   const [cast, setCast] = useState([]);
   const [recommended, setSimilar] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchDetails = async () => {
@@ -22,11 +23,11 @@ const useGetDetails = ({ id, media }) => {
       setCast(castData);
       setSimilar(recommendedData);
     };
-
     fetchDetails();
+    setLoading(false);
   }, []);
 
-  return { data, genres, cast, recommended };
+  return { data, genres, cast, recommended, loading };
 };
 
 export { useGetDetails };

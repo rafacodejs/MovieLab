@@ -13,6 +13,7 @@ const Slide = ({
   index,
   media,
   currentSlide,
+  loading,
 }) => {
   const { categories } = useGetCategories({ id, media });
 

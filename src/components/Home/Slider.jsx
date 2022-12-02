@@ -3,7 +3,7 @@ import styles from '../../styles/styles';
 import { Slide } from '../index';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-const Slider = ({ data }) => {
+const Slider = ({ data, loading }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideLength = data.length;
 
@@ -35,7 +35,9 @@ const Slider = ({ data }) => {
   }, [currentSlide]);
 
   return (
-    <div className='relative w-[90%] ss:w-[90%] overflow-hidden rounded-[10px] scroll-smooth shadow-5xl slide-container'>
+    <div
+      className={`relative w-[90%] ss:w-[90%] overflow-hidden rounded-[10px] scroll-smooth shadow-5xl slide-container `}
+    >
       <div className={`${styles.navigation} navigation z-30`}>
         <span className={`${styles.PrevNext} rounded-r-lg`}>
           <IoIosArrowBack
@@ -66,6 +68,7 @@ const Slider = ({ data }) => {
               item.backdrop_path || item.poster_path
             }`}
             currentSlide={currentSlide}
+            loading={loading}
           />
         );
       })}

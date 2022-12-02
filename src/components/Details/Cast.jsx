@@ -46,13 +46,13 @@ const Cast = ({ data, title }) => {
             className='mr-3 text-white text-[8px]'
             onClick={() => slide('left')}
           >
-            <MdKeyboardArrowLeft className='w-[50px] h-[50px] bg-transparent border-[1px] border-white hover:bg-tertiary hover:border-tertiary rounded-[10px] cursor-pointer p-2' />
+            <MdKeyboardArrowLeft className='w-[50px] h-[50px] bg-transparent border-[1px] border-white hover:bg-primary hover:border-primary rounded-[10px] cursor-pointer p-2' />
           </span>
           <span
             className='mr-3 text-white text-[8px]'
             onClick={() => slide('right')}
           >
-            <MdKeyboardArrowRight className='w-[50px] h-[50px] bg-transparent border-[1px] border-white hover:bg-tertiary hover:border-tertiary rounded-[10px] cursor-pointer p-2' />
+            <MdKeyboardArrowRight className='w-[50px] h-[50px] bg-transparent border-[1px] border-white hover:bg-primary hover:border-primary rounded-[10px] cursor-pointer p-2' />
           </span>
         </div>
       </div>
@@ -79,7 +79,7 @@ const Cast = ({ data, title }) => {
               />
             </Link>
 
-            <div className='w-[150px] ss:w-full flex flex-row h-[60px] ss:h-[100px] relative bg-blackHover rounded-b-[14px]'>
+            <div className='w-[150px] ss:w-full flex flex-row h-[60px] ss:h-[100px] relative bg-black-gradient rounded-b-[14px]'>
               <div className='w-[90px] ss:w-[100px] mt-2 ml-2 mr-3'>
                 <h1 className='w-[20px] text-[16px] text-white font-primary font-normal'>
                   {item.original_name}

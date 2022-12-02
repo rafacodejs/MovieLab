@@ -18,6 +18,7 @@ const Banner = ({
   genres,
   home,
   mediaDefault,
+  
 }) => {
   const [like, setLike] = useState(false);
 
@@ -39,9 +40,9 @@ const Banner = ({
   }, []);
 
   return (
-    <section className={` flex-col mb-14`}>
+    <section className={`flex-col mb-14`}>
       <div
-        className={`${styles.flexStarX} absolute h-[450px] sd:h-auto blur-sm sd:blur-none`}
+        className={`${styles.flexStarX} absolute h-[450px] sd:h-auto blur-sm sd:blur-none `}
       >
         <LazyLoadImage
           src={backdrop}

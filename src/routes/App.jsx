@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { PrivateRoute } from './PrivateRoute';
 import { UserContext } from '../context/index';
@@ -21,8 +21,12 @@ const App = () => {
 
   window.scrollTo(0, 0);
 
+  const [loading, setLoading] = useState(true);
+
+
   return (
     <main>
+    
       <HashRouter>
         <div className='hidden sd:block'>
           <Header />
