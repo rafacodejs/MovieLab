@@ -1,6 +1,6 @@
 # [MovieLab](https://themovielab.netlify.app/) | [<img src="https://i.postimg.cc/5NBMxTJX/github.png" alt="GitHub" height="20px"/>](https://github.com/rafacodejs) | [<img src="https://i.postimg.cc/J7BLFtdc/linkedin.png" alt="Linkedin" height="20px"/>](https://www.linkedin.com/in/rafacodejs/) | [<img src="https://i.postimg.cc/65TVxg9t/world-globe.png" alt="Portafolio Web" height="20px"/>](https://rafaelmalpica.netlify.app/)
 
-[![Img1.jpg](https://i.postimg.cc/bYCMynfQ/Img1.jpg)](https://themovielab.netlify.app/)
+[![Img1.jpg](https://i.postimg.cc/hGyRvVsT/Img1.jpg)](https://themovielab.netlify.app/)
 
 ## 📜 Resumen 📜
 
