@@ -13,7 +13,7 @@ const Tv = () => {
       <div className='w-[90%] ss:w-[100%] flex flex-col justify-center items-start ss:items-center mb-2 ss:p-0'>
         <h1 className='font-primary font-bold text-[24px] sm:text-[30px] md:text-[38px] text-white'>
           Explorer
-          <span className='text-gradient'> Top Movies</span> Around The World
+          <span className='text-gradient'> Top Tv Series</span> Around The World
         </h1>
         <p className='font-primary font-normal text-[16px] ss:text-[18px] text-dimWhite'>
           From you phone at this website
