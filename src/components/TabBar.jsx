@@ -12,7 +12,7 @@ const TabBar = () => {
 
   return (
     <div
-      className={`w-full h-[70px] ${styles.flexCenter} fixed bottom-0 rounded-t-[12px] shadow-2xl z-30 bg-dimDark border-t-[1px] border-primary `}
+      className={`w-full h-[70px] ${styles.flexCenter} fixed bottom-0 rounded-t-[12px] shadow-2xl z-30 bg-black-gradient border-t-[1px] border-primary `}
     >
       <ul className='flex justify-between items-center '>
         {tabBar.map((link) => (
