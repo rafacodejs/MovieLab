@@ -32,7 +32,12 @@ const Home = () => {
         subTitle='See our hot trends about all kind of content that you like'
         data={trendData}
       />
-      <Carousel data={moviesData} title='Movies 🎥' mediaDefault='movie' />
+      <Carousel
+        data={moviesData}
+        title='Movies 🎥'
+        mediaDefault='movie'
+        key={moviesData.id}
+      />
       <Carousel data={tvData} title='Tv Series 📺' mediaDefault='tv' />
       <CategoryButton dataMovie={categoryMovieData} dataTv={categoryTvData} />
     </section>
